@@ -10,7 +10,7 @@
 current_path = pwd;
 
 % (3) input the file data
-folderPath = [current_path '\project\dataset\Pitting_degradation_level_0 (Healthy)']; 
+folderPath = fullfile(current_path, 'project', 'dataset', 'Pitting_degradation_level_6');
 
 % Get a list of all text files in the folder
 filePattern = fullfile(folderPath, '*.txt');
