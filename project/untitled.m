@@ -30,8 +30,6 @@ for k = 1:10
     filename_data = repmat(parts, rows, 1);
     filename_data = str2double(filename_data);
     current_data = [file_data filename_data];
-
-
      
 end
 
