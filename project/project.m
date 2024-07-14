@@ -8,8 +8,10 @@ folderPath = [current_path '\dataset\Pitting_degradation_level_0 (Healthy)'];
 filePattern = fullfile(folderPath, '*.txt');
 txtFiles = dir(filePattern);
 
+all_data = [];
+
 % Loop through each file
-for k = 1:10
+for k = 1:length(txtFiles)
     % Get the file name
     baseFileName = txtFiles(k).name;
     fullFileName = fullfile(folderPath, baseFileName);
@@ -29,7 +31,10 @@ for k = 1:10
     rows = size(file_data, 1);
     filename_data = repmat(parts, rows, 1);
     filename_data = str2double(filename_data);
-    current_data = [file_data filename_data];
-     
+
+    % horizontale acc -  axiale acc - vertikale acc - Tacho - Speed - Newton - Repetition Number
+    current_data = [file_data, filename_data];  
+    all_data = [all_data; current_data];
+    print(k);
 end
 
