@@ -1,15 +1,16 @@
 % (1) Make sure the .m file is in the same folder as the dataset-folder
-% (2) Put in the correct folder path
-% (3) Run and Read files
+% (2) Run this file from root Folder (ConditionMonitoring)
+% (3) Put in the correct folder path
+% (4) Run and happy reading files :D
 
-% /TODO prelocate all_data for more performance
+% /TODO prelocate all_data for more performance => not getting slower at the end
 % use tic toc prinf to messure perfomance
 
 % Specify the folder where the text files are located
 current_path = pwd;
 
-% input the file data
-folderPath = [current_path '\project\dataset\Pitting_degradation_level_0 (Healthy)'];
+% (3) input the file data
+folderPath = [current_path '\project\dataset\Pitting_degradation_level_0 (Healthy)']; 
 
 % Get a list of all text files in the folder
 filePattern = fullfile(folderPath, '*.txt');
